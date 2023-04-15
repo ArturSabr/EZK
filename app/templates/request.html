@@ -1,0 +1,272 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="form">
+        <div class="container">
+            <div class="form__content">
+                <div class="form__right">
+                    <img draggable="false" src="{% static './components/img/general/time.png' %}" alt="">
+                </div>
+                <div class="form__left">
+                    <form action="" method="post" enctype="application/x-www-form-urlencoded">{% csrf_token %}
+                    <h1 class="form__title">Подать заявку</h1>
+                    <div class="form__fix">
+                        <div class="form__item">
+                            <p class="form__info">Имя</p>
+                            <label class="form__label">
+                                {{ form.first_name }}
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.1794 9.02025C10.103 9.01261 10.0113 9.01261 9.92731 9.02025C8.1094 8.95915 6.66577 7.46969 6.66577 5.6365C6.66577 3.76513 8.17815 2.24512 10.0572 2.24512C11.9285 2.24512 13.4485 3.76513 13.4485 5.6365C13.4409 7.46969 11.9973 8.95915 10.1794 9.02025Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M6.36022 11.8394C4.51176 13.0768 4.51176 15.0933 6.36022 16.323C8.46074 17.7285 11.9056 17.7285 14.0061 16.323C15.8546 15.0856 15.8546 13.0691 14.0061 11.8394C11.9132 10.4416 8.46838 10.4416 6.36022 11.8394Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </label>
+
+                        </div>
+                        <div class="form__item">
+                            <p class="form__info">Фамилия</p>
+                            <label class="form__label">
+                                {{ form.last_name }}
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.1794 9.02025C10.103 9.01261 10.0113 9.01261 9.92731 9.02025C8.1094 8.95915 6.66577 7.46969 6.66577 5.6365C6.66577 3.76513 8.17815 2.24512 10.0572 2.24512C11.9285 2.24512 13.4485 3.76513 13.4485 5.6365C13.4409 7.46969 11.9973 8.95915 10.1794 9.02025Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M6.36022 11.8394C4.51176 13.0768 4.51176 15.0933 6.36022 16.323C8.46074 17.7285 11.9056 17.7285 14.0061 16.323C15.8546 15.0856 15.8546 13.0691 14.0061 11.8394C11.9132 10.4416 8.46838 10.4416 6.36022 11.8394Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+                    <div class="form__fix">
+                        <div class="form__item">
+                            <p class="form__info">Отчество</p>
+                            <label class="form__label">
+                                {{ form.middle_name }}
+
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.1794 9.02025C10.103 9.01261 10.0113 9.01261 9.92731 9.02025C8.1094 8.95915 6.66577 7.46969 6.66577 5.6365C6.66577 3.76513 8.17815 2.24512 10.0572 2.24512C11.9285 2.24512 13.4485 3.76513 13.4485 5.6365C13.4409 7.46969 11.9973 8.95915 10.1794 9.02025Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M6.36022 11.8394C4.51176 13.0768 4.51176 15.0933 6.36022 16.323C8.46074 17.7285 11.9056 17.7285 14.0061 16.323C15.8546 15.0856 15.8546 13.0691 14.0061 11.8394C11.9132 10.4416 8.46838 10.4416 6.36022 11.8394Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </label>
+                        </div>
+
+                        <div class="form__item">
+                            <p class="form__info">Дата рождения</p>
+                            <label class="form__label">
+                                {{ form.age }}
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.1794 9.02025C10.103 9.01261 10.0113 9.01261 9.92731 9.02025C8.1094 8.95915 6.66577 7.46969 6.66577 5.6365C6.66577 3.76513 8.17815 2.24512 10.0572 2.24512C11.9285 2.24512 13.4485 3.76513 13.4485 5.6365C13.4409 7.46969 11.9973 8.95915 10.1794 9.02025Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M6.36022 11.8394C4.51176 13.0768 4.51176 15.0933 6.36022 16.323C8.46074 17.7285 11.9056 17.7285 14.0061 16.323C15.8546 15.0856 15.8546 13.0691 14.0061 11.8394C11.9132 10.4416 8.46838 10.4416 6.36022 11.8394Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+                    <div class="form__fix">
+                        <div class="form__item">
+                            <p class="form__info">В каком колледже, техникуме, лицее учитесь?</p>
+                            <label class="form__label">
+                                {{ form.address }}
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.77698 6.53495C1.77698 3.86156 3.30463 2.71582 5.59611 2.71582H13.2344C15.5258 2.71582 17.0535 3.86156 17.0535 6.53495V11.8817C17.0535 14.5551 15.5258 15.7009 13.2344 15.7009H5.59611"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M13.2344 6.91699L10.8437 8.82656C10.0569 9.45289 8.76606 9.45289 7.97932 8.82656L5.59619 6.91699"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M1.77698 12.6455H6.35993" stroke="#AAAAAA" stroke-width="1.07834"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M1.77698 9.59033H4.06845" stroke="#AAAAAA" stroke-width="1.07834"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="form__item">
+                            <p class="form__info">Фактический адрес</p>
+                            <label class="form__label">
+                                {{ form.real_address }}
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.77698 6.53495C1.77698 3.86156 3.30463 2.71582 5.59611 2.71582H13.2344C15.5258 2.71582 17.0535 3.86156 17.0535 6.53495V11.8817C17.0535 14.5551 15.5258 15.7009 13.2344 15.7009H5.59611"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M13.2344 6.91699L10.8437 8.82656C10.0569 9.45289 8.76606 9.45289 7.97932 8.82656L5.59619 6.91699"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M1.77698 12.6455H6.35993" stroke="#AAAAAA" stroke-width="1.07834"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M1.77698 9.59033H4.06845" stroke="#AAAAAA" stroke-width="1.07834"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form__fix">
+                        <div class="form__item">
+                            <p class="form__info">Ваша специальность в учебном учреждении?</p>
+                            <label class="form__label">
+                                {{ form.education }}
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.1495 9.20764C12.1495 10.72 10.9274 11.9421 9.41504 11.9421C7.90266 11.9421 6.68054 10.72 6.68054 9.20764C6.68054 7.69527 7.90266 6.47314 9.41504 6.47314C10.9274 6.47314 12.1495 7.69527 12.1495 9.20764Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.41495 15.5241C12.1113 15.5241 14.6242 13.9354 16.3734 11.1856C17.0608 10.1086 17.0608 8.29834 16.3734 7.22134C14.6242 4.47157 12.1113 2.88281 9.41495 2.88281C6.71865 2.88281 4.20566 4.47157 2.4565 7.22134C1.76906 8.29834 1.76906 10.1086 2.4565 11.1856C4.20566 13.9354 6.71865 15.5241 9.41495 15.5241Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+
+                            </label>
+                        </div>
+                        <div class="form__item">
+                            <p class="form__info">На каком вы курсе</p>
+                            <label class="form__label">
+                                {{ form.course }}
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.1495 9.20764C12.1495 10.72 10.9274 11.9421 9.41504 11.9421C7.90266 11.9421 6.68054 10.72 6.68054 9.20764C6.68054 7.69527 7.90266 6.47314 9.41504 6.47314C10.9274 6.47314 12.1495 7.69527 12.1495 9.20764Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.41495 15.5241C12.1113 15.5241 14.6242 13.9354 16.3734 11.1856C17.0608 10.1086 17.0608 8.29834 16.3734 7.22134C14.6242 4.47157 12.1113 2.88281 9.41495 2.88281C6.71865 2.88281 4.20566 4.47157 2.4565 7.22134C1.76906 8.29834 1.76906 10.1086 2.4565 11.1856C4.20566 13.9354 6.71865 15.5241 9.41495 15.5241Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="form__fix">
+                        <div class="form__item">
+                            <p class="form__info">Ваша специальность в учебном учреждении?</p>
+                            <label class="form__label">
+                                {{ form.speciality }}
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.1495 9.20764C12.1495 10.72 10.9274 11.9421 9.41504 11.9421C7.90266 11.9421 6.68054 10.72 6.68054 9.20764C6.68054 7.69527 7.90266 6.47314 9.41504 6.47314C10.9274 6.47314 12.1495 7.69527 12.1495 9.20764Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.41495 15.5241C12.1113 15.5241 14.6242 13.9354 16.3734 11.1856C17.0608 10.1086 17.0608 8.29834 16.3734 7.22134C14.6242 4.47157 12.1113 2.88281 9.41495 2.88281C6.71865 2.88281 4.20566 4.47157 2.4565 7.22134C1.76906 8.29834 1.76906 10.1086 2.4565 11.1856C4.20566 13.9354 6.71865 15.5241 9.41495 15.5241Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+
+                            </label>
+                        </div>
+                        <div class="form__item">
+                            <p class="form__info">Контакты отца</p>
+                            <label class="form__label">
+                                {{ form.contact_dad }}
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.1495 9.20764C12.1495 10.72 10.9274 11.9421 9.41504 11.9421C7.90266 11.9421 6.68054 10.72 6.68054 9.20764C6.68054 7.69527 7.90266 6.47314 9.41504 6.47314C10.9274 6.47314 12.1495 7.69527 12.1495 9.20764Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.41495 15.5241C12.1113 15.5241 14.6242 13.9354 16.3734 11.1856C17.0608 10.1086 17.0608 8.29834 16.3734 7.22134C14.6242 4.47157 12.1113 2.88281 9.41495 2.88281C6.71865 2.88281 4.20566 4.47157 2.4565 7.22134C1.76906 8.29834 1.76906 10.1086 2.4565 11.1856C4.20566 13.9354 6.71865 15.5241 9.41495 15.5241Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="form__fix">
+                        <div class="form__item">
+                            <p class="form__info">Контакты матери</p>
+                            <label class="form__label">
+                                {{ form.contact_mam }}
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.1495 9.20764C12.1495 10.72 10.9274 11.9421 9.41504 11.9421C7.90266 11.9421 6.68054 10.72 6.68054 9.20764C6.68054 7.69527 7.90266 6.47314 9.41504 6.47314C10.9274 6.47314 12.1495 7.69527 12.1495 9.20764Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.41495 15.5241C12.1113 15.5241 14.6242 13.9354 16.3734 11.1856C17.0608 10.1086 17.0608 8.29834 16.3734 7.22134C14.6242 4.47157 12.1113 2.88281 9.41495 2.88281C6.71865 2.88281 4.20566 4.47157 2.4565 7.22134C1.76906 8.29834 1.76906 10.1086 2.4565 11.1856C4.20566 13.9354 6.71865 15.5241 9.41495 15.5241Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+
+                            </label>
+                        </div>
+                        <div class="form__item">
+                            <p class="form__info">Коментарий</p>
+                            <label class="form__label">
+                                {{ form.comment }}
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.1495 9.20764C12.1495 10.72 10.9274 11.9421 9.41504 11.9421C7.90266 11.9421 6.68054 10.72 6.68054 9.20764C6.68054 7.69527 7.90266 6.47314 9.41504 6.47314C10.9274 6.47314 12.1495 7.69527 12.1495 9.20764Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.41495 15.5241C12.1113 15.5241 14.6242 13.9354 16.3734 11.1856C17.0608 10.1086 17.0608 8.29834 16.3734 7.22134C14.6242 4.47157 12.1113 2.88281 9.41495 2.88281C6.71865 2.88281 4.20566 4.47157 2.4565 7.22134C1.76906 8.29834 1.76906 10.1086 2.4565 11.1856C4.20566 13.9354 6.71865 15.5241 9.41495 15.5241Z"
+                                        stroke="#AAAAAA" stroke-width="1.07834" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+
+                            </label>
+                        </div>
+
+                    </div>
+                    <button class="form__btn">
+                        Подать заявку
+                    </button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+

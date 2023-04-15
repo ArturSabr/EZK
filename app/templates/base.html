@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static './css/index.css' %}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__link">
+                    <div class="header__logo">
+                        <a href="{% url 'home' %}">
+                        <img src="{% static './icon/header/ЕЗК.svg' %}" alt="">
+                        <h1 class="header__name">единая цифровая зачетная книжка</h1>
+                            </a>
+                    </div>
+                    <ul class="header__ul">
+                        <li class="header__li">О платформе</li>
+                        <li class="header__li">Новости</li>
+                        <li class="header__li">Безопасность</li>
+                        <li class="header__li">О нас</li>
+                    </ul>
+                </div>
+                <div class="header__application">
+                    <div class="header__language">
+                        <img src="{% static './icon/header/launguage.svg' %}" alt="" />
+                        <p class="header__text">Russian</p>
+                    </div>
+                    <button class="header__btn">
+                        <a class="header__a" href="{% url 'send_application' %}">Подать заявку</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <section class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__item">
+                    <div class="footer__fix">
+                        <img src="{% static './icon/header/ЕЗК.svg' %}" alt="">
+                        <h1 class="footer__name">eдиная цифровая зачетна книжка</h1>
+                    </div>
+                    <ul class="footer__ul">
+                        <li class="footer__main">Platform</li>
+                        <li class="footer__li">Overview</li>
+                        <li class="footer__li">Features</li>
+                        <li class="footer__li">About</li>
+                        <li class="footer__li">Pricing</li>
+                    </ul>
+                    <ul class="footer__ul">
+                        <li class="footer__main">Help</li>
+                        <li class="footer__li">How does it work?</li>
+                        <li class="footer__li">Where to ask questions?</li>
+                        <li class="footer__li">How to pay?</li>
+                        <li class="footer__li">What is needed for this?</li>
+                    </ul>
+                    <ul class="footer__ul">
+                        <li class="footer__main">Contacts</li>
+                        <li class="footer__li">Contacts</li>
+                        <li class="footer__li__info">116 Archer Rd
+                            Broadalbin, New York(NY), 12025</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__line"></div>
+            <div class="footer__end">
+                <p class="footer__rights">2022 - 2023. All rights reserved.</p>
+                <div class="footer__img">
+                    <img src="{% static './components/img/footer/facebook.svg' %}" alt="">
+                    <img src="{% static './components/img/footer/twit.svg' %}" alt="">
+                    <img src="{% static './components/img/footer/insta.svg' %}" alt="">
+                    <img src="{% static './components/img/footer/in.svg' %}" alt="">
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
