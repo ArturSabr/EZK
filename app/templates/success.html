@@ -4,9 +4,9 @@
     <section class="sucsess">
         <div class="container">
             <div class="sucsess__content">
-                <img src="./components/img/general/sucsess.png" alt="">
+                <img src="{% static './components/img/general/sucsess.png' %}" alt="">
                 <h1 class="sucsess__title">Ваша заявка успешно отправлена</h1>
-                <button class="sucsess__btn">< Назад</button>
+                <a href="{% url 'home' %}"><button class="sucsess__btn">Назад</button></a>
             </div>
         </div>
     </section>

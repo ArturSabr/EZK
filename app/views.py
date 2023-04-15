@@ -1,6 +1,7 @@
 from .models import *
 from django.views.generic import ListView, DetailView, CreateView
 from .forms import *
+from django.urls import reverse
 
 
 class Home(ListView):
@@ -9,9 +10,10 @@ class Home(ListView):
     context_object_name = 'news'
     template_name = 'index.html'
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     return context
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form'] = ApplicationForm
+        return context
 
 class NewsListView(ListView):
     model = NewsModel
@@ -60,6 +62,8 @@ class SendApplicationView(CreateView):
     template_name = 'request.html'
     form_class = ApplicationForm
 
+    def get_success_url(self):
+        return reverse('success')
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
     #     return context
@@ -73,5 +77,7 @@ class ApplicationSendSuccessView(ListView):
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
     #     return context
+
+
 
 
