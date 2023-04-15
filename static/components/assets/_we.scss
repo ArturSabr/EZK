@@ -1,0 +1,102 @@
+.we {
+    &__content {
+        margin-top: 450px;
+    }
+
+    &__title {
+        text-align: center;
+        @include font(700, 48px, #010851);
+    }
+
+    &__block {
+        display: flex;
+        justify-content: center;
+        margin-top: 128px;
+        gap: 91px;
+        flex-wrap: wrap;
+    }
+
+    &__li {
+        padding: 15px 29px;
+        width: 210px;
+        background: #8D64DC;
+        border-radius: 23.4493px;
+        color: white;
+
+        &__second {
+            padding: 15px 29px;
+            width: 210px;
+            background: #49A7EB;
+            border-radius: 23.4493px;
+            color: white;
+        }
+
+        &__third {
+            padding: 15px 29px;
+            width: 210px;
+            background: #E23838;
+            border-radius: 23.4493px;
+            color: white;
+        }
+
+        &__four {
+            padding: 11px 33px;
+            width: 414px;
+            background: #49A7EB;
+            border-radius: 28.4493px;
+            color: white;
+        }
+
+        &__five {
+            padding: 11px 33px;
+            width: 414px;
+            background: #5CB24E;
+            border-radius: 28.4493px;
+            color: white;
+        }
+
+        &__six {
+            padding: 11px 33px;
+            width: 414px;
+            background:  #E23838;
+            border-radius: 28.4493px;
+            color: white;
+        }
+    }
+
+    &__ul {
+        display: flex;
+        flex-direction: column;
+        gap: 54px;
+
+        &__second {
+            display: flex;
+            flex-direction: column;
+            gap: 54px;
+        }
+        &__third{
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+    }
+
+    &__problem {
+        @include font(700, 48px, #8D64DC);
+        text-align: center;
+        margin-top: 283px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+        flex-wrap: wrap;
+    }
+    &__dop{
+        @include font(400, 18px, #000000);
+        margin: 0 auto;
+        max-width: 1060px;
+    }
+}

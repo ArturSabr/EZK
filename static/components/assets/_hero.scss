@@ -1,0 +1,72 @@
+.hero {
+    margin-top: 75px;
+
+    &__content {
+        position: relative;
+    }
+    &__main{
+        max-width: 100%;
+        position:absolute;
+        margin: 0 auto;
+        z-index: -1;
+    }
+    &__box{
+        display: flex;
+        flex-wrap: wrap
+    }
+
+    &__title {
+        @include font (700, 70px, #FFFFFF);
+        max-width: 718px;
+        padding: 150px 0px 0px 60px;
+        line-height: 91px;
+    }
+
+    &__description {
+        max-width: 688px;
+        height: 69px;
+        @include font(400, 18px, #FFFFFF);
+        line-height: 23px;
+        margin: 57px 0px 0px 60px;
+    }
+
+    &__btn {
+        width: 190px;
+        padding: 19px 31px;
+        background: #49A7EB;
+        border: 1px solid rgba(69, 68, 154, 0.2);
+        border-radius: 10px;
+        text-align: center;
+        line-height: 26px;
+
+        &__second {
+            width: 190px;
+            padding: 19px 31px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            line-height: 26px;
+        }
+    }
+    &__a {
+        @include font(600, 18px, #FFFFFF);
+
+        &__second {
+            @include font(600, 18px, #FFFFFF);
+        }
+    }
+    &__block{
+        margin: 57px 0px 0px 60px;
+        display: flex;
+        gap: 23px;
+    }
+}
+@media screen and (max-width:1502px) {
+    .hero{
+        &__left{
+            display: none;
+        }
+    }
+}
+

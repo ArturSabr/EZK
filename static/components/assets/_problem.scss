@@ -1,0 +1,88 @@
+.problem {
+    &__content {
+        margin-top: 197px;
+    }
+    &__title {
+        margin: 0 auto;
+        @include font(700, 48px, #010851);
+        max-width: 737px;
+        height: 116px;
+        text-align: center;
+    }
+
+    &__span {
+        color: #49A7EB;
+    }
+
+    &__box {
+        display: flex;
+        margin-top: 84px;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        flex-wrap: wrap;
+    }
+
+    &__ul {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    &__li {
+        @include font(600, 24px, #FFFFFF);
+        max-width: 335px;
+        padding: 11px 33px;
+        border-radius: 28px;
+        background: #49A7EB;
+
+        &__second {
+            @include font(600, 24px, #FFFFFF);
+            max-width: 426px;
+            padding: 11px 33px;
+            border-radius: 28px;
+            background: #8D64DC;
+        }
+    }
+    &__chart{
+        text-align: center;
+        margin-top: 376px;
+    }
+    &__bg{
+        position:absolute;
+        text-align: center;
+        display: flex;
+        margin: 0 auto;
+        z-index: -1;
+        max-width: 100%;
+    }
+    &__fixed{
+        max-width: 100%;
+        margin-bottom: 316px;
+    }
+    &__text{
+        @include font(700, 48px, #FFFFFF);
+        max-width: 738px;
+        height: 159px;
+        padding: 86px 0px 0px 88px;
+    }
+    &__description{
+        padding: 23px 0px 0px 88px; 
+        max-width: 653px;
+        height: 68px;
+        @include font(400, 18px, #FFFFFF);
+    }
+    &__btn{
+        @include font(600, 18px, #FFFFFF);
+        padding: 17px 24px;
+        background: #ED80FD;
+        border: none;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 26px;
+        margin: 17px 0px 0px 88px;
+    }
+    &__fix{
+        display: flex;
+    }
+}

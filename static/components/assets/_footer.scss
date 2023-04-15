@@ -1,0 +1,48 @@
+.footer{
+    &__content{
+        margin-top: 58px;
+    }
+    &__name{
+        max-width: 239px;
+        height: 54px;
+        @include font(700,24px, #000000 );
+        line-height: 27px;
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__main{
+        @include font(500, 18px, #000000);
+        margin-bottom: 29px;
+    }
+
+    &__li{
+        display: flex;
+        @include font(400, 16px, #010851);
+        &__info{
+            @include font(400, 16px, #010851);
+            max-width: 257px;
+        }
+    }
+    &__ul{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__line{
+        margin-top: 112px;
+        max-width: 1400px;
+        border: 1px solid  #010851;
+    }
+    &__end{
+        max-width: 1400px;
+        display: flex;
+        justify-content: space-between;
+        margin: 63px 0px 102px 0px;
+    }
+    &__img{
+        display: flex;
+        gap: 57px;
+    }
+}

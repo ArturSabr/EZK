@@ -1,0 +1,67 @@
+.header {
+    margin-top: 46px;
+
+    &__name {
+        @include font (700, 13.27px, #000000);
+
+        line-height: 14px;
+        width: 127px;
+        height: 30px;
+    }
+
+    &__logo {
+        display: flex;
+        margin-right: 93px;
+        align-items: center;
+
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+
+    &__ul {
+        display: flex;
+        gap: 60px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__application {
+        display: flex;
+    }
+
+    &__language {
+        display: flex;
+        gap: 22px;
+        margin-right: 50px;
+        align-items: center;
+    }
+
+    &__li {
+        @include font(500, 18px, #454868);
+        cursor: pointer;
+    }
+
+    &__text {
+        @include font(400, 18px, #454868);
+    }
+
+    &__btn {
+        padding: 11px 26px;
+        background: #49A7EB;
+        border: 1px solid rgba(69, 68, 154, 0.2);
+        border-radius: 10px;
+        text-align: center;
+        line-height: 26px;
+    }
+
+    &__a {
+        @include font(600, 18px, #FFFFFF);
+    }
+}
