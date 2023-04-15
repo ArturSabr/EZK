@@ -1,0 +1,28 @@
+.func {
+    margin-top: 200px;
+
+    &__content {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__pills {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .func {
+        &__content {
+            flex-direction: column;
+            text-align: center;
+        }
+        &__pills {
+            margin-top: 20px;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+}

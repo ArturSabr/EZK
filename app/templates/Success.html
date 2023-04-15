@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Единная Зачетная Книжка
+{% endblock %}
+{% block content %}
+    <section class="success">
+      <div class="success__content">
+        <div class="success__box">
+          <svg
+            width="117"
+            height="117"
+            viewBox="0 0 117 117"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M111 58.5C111 87.4949 87.4949 111 58.5 111C29.5051 111 6 87.4949 6 58.5C6 29.5051 29.5051 6 58.5 6C66.737 6 74.5309 7.89693 81.4687 11.2778M101.156 25.6875L55.2187 71.625L42.0937 58.5"
+              stroke="#36942E"
+              stroke-width="12"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <h1>Ваша заявка успешно отправлена</h1>
+          <button>Назад</button>
+        </div>
+      </div>
+    </section>
+
+{% endblock %}

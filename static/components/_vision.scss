@@ -1,0 +1,27 @@
+.vision {
+    margin-top: 120px;
+
+    &__pills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 50px;
+        margin-top: 100px;
+
+        .pill {
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .vision {
+        &__pills {
+            justify-content: center;
+
+            .pill {
+                width: 100%;
+            }
+        }
+    }
+}

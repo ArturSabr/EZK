@@ -1,0 +1,32 @@
+.success {
+  &__content {
+    max-width: 100%;
+    background: #f0f2f5;
+    border-radius: 20px;
+    text-align: center;
+    padding: 252px 0px;
+  }
+
+  h1 {
+    max-width: 354px;
+    height: 74px;
+    margin: 31px auto;
+  }
+
+  button {
+    padding: 11px 52px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    background: #8d64dc;
+    border: 3px solid rgba(69, 68, 154, 0.2);
+    border-radius: 10px;
+    transition: 0.3s;
+    &:hover {
+      background: transparent;
+      color: #8d64dc;
+    }
+  }
+}

@@ -8,45 +8,19 @@
       <div
         class="hero__content"
         style="
-          background: linear-gradient(134.65deg, #5961f9 3.4%, #ee9ae5 97.69%);
+          background: linear-gradient(134.65deg, #49A7EB 3.4%, #8D64DC 97.69%);
         "
       >
         <div class="hero__info">
           <h1>Что такое Единая цифровая книжка?</h1>
-          <p>
-            Приложение ЕДИНАЯ ЦИФРОВАЯ ЗАЧЕТНАЯ КНИЖКА это доступ в режиме
-            онлайн к любой учебной информации, предоставленный преподавателям,
-            родителям и студентам.
-          </p>
+          <p></p>
           <div class="hero__btns">
             <a href="{% url 'send_application' %}"><button>Подать зявку</button></a>
             <a href="{% url 'aboutus' %}"><button>О нас</button></a>
           </div>
         </div>
         <div class="hero__img">
-          <img src="{% static './img/hero/hero-img-1.png' %}" alt="hero-img" />
-        </div>
-      </div>
-    </section>
-    <section class="features">
-      <div class="container">
-        <h2 class="title">Преимущества</h2>
-        <h3 class="features__suptitle">
-          Удобство: ЕЦЗК позволяет ученикам и студентам хранить все свои достижения в одном месте. Больше не нужно искать бумажные документы и просить их пересылку
-        </h3>
-        <div class="features__content">
-          <div class="features__item">
-            <img src="{% static './img/features/img-1.png' %}" alt="" />
-            <p>Безопасность</p>
-          </div>
-          <div class="features__item">
-            <img src="{% static './img/features/img-2.png' %}" alt="" />
-            <p>Эффективность</p>
-          </div>
-          <div class="features__item">
-            <img src="{% static './img/features/img-3.png' %}" alt="" />
-            <p>Прозрачность</p>
-          </div>
+          <img src="{% static './img/hero/hero-img-2.png' %}" alt="hero-img" />
         </div>
       </div>
     </section>
@@ -62,50 +36,13 @@
               >
             </h2>
             <p>
-              Безопасность ЕЦЗК использует высокие стандарты безопасности и защиты данных, что позволяет ученикам и студентам быть уверенными в сохранности своих личных данных.
+              On the other hand ,we denounce with righteous indignation and
+              dislike men who are so beguiled and demoralized
             </p>
             <button class="btn">Подробнее</button>
           </div>
           <div class="security__img">
             <img src="{% static './img/security/img.png' %}" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="news">
-      <div class="container">
-        <h2 class="title">Новости</h2>
-        <div class="news__content">
-          {% for i in news %}
-          <div class="news__item">
-            <img src="{% static './img/news/img.png' %}" alt="" />
-            <div class="news__info">
-              <h2>{{ i.title }}</h2>
-              <p>
-
-              </p>
-              <a href="{% url 'detail_news' i.pk %}"><button>Подробнее</button></a>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </section>
-    <section class="security">
-      <div class="container">
-        <div class="security__content">
-          <div class="security__img">
-            <img src="{% static './img/security/img-2.png' %}" alt="" />
-          </div>
-          <div class="security__info">
-            <h2>
-              Более <span class="text-dark-blue">800 000+</span> Студентов
-            </h2>
-            <p>
-              В единой зачетной книжки зарегистрировано более +800.000 студентов
-              по всему КР
-            </p>
-            <a href="{% url 'send_application' %}"><button class="btn">Подать заявку</button></a>
           </div>
         </div>
       </div>
@@ -638,7 +575,7 @@
             </div>
           </div>
 
-          <button type="submit">Подать заявку</button>
+          <button>Подать заявку</button>
           </form>
         </div>
       </div>

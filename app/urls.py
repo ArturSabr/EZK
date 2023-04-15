@@ -14,5 +14,9 @@ urlpatterns = [
     path('security/', Home.as_view(), name='security'),
     path('send_application', SendApplicationView.as_view(), name='send_application'),
     path('success/', ApplicationSendSuccessView.as_view(), name='success'),
-
+    path('login/', login, name='login'),
+    path('aboutus/', aboutus, name='aboutus'),
+    path('aboutplatform/', aboutplatform, name='AboutPlatform'),
+    path('security/', security, name='security'),
+    path('success/', ApplicationSendSuccessView.as_view(), name='success'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

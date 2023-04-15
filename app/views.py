@@ -2,34 +2,38 @@ from .models import *
 from django.views.generic import ListView, DetailView, CreateView
 from .forms import *
 from django.urls import reverse
+from django.shortcuts import render
 
 
 class Home(ListView):
     model = NewsModel
-    queryset = NewsModel.objects.all().order_by('-created_date')[:3]
+    queryset = NewsModel.objects.all()[:3]
     context_object_name = 'news'
     template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['form'] = ApplicationForm
+        context['news'] = NewsModel.objects.all()
         return context
+
 
 class NewsListView(ListView):
     model = NewsModel
     queryset = NewsModel.objects.all()
     context_object_name = 'news'
-    template_name = 'news_list.html'
+    template_name = 'News.html'
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     return context
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form'] = ApplicationForm
+        return context
 
 
 class NewsDetailView(DetailView):
     model = NewsModel
     context_object_name = 'news'
-    template_name = 'news_detail.html'
+    template_name = 'NewsDetail.html'
 
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
@@ -59,7 +63,7 @@ class AdminApplicationDetailView(DetailView):
 
 class SendApplicationView(CreateView):
     model = ApplicationModel
-    template_name = 'request.html'
+    template_name = 'Offer.html'
     form_class = ApplicationForm
 
     def get_success_url(self):
@@ -72,12 +76,24 @@ class SendApplicationView(CreateView):
 class ApplicationSendSuccessView(ListView):
     model = ApplicationModel
     context_object_name = 'application'
-    template_name = 'success.html'
+    template_name = 'Success.html'
 
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
     #     return context
 
 
+def aboutus(request):
+    return render(request, 'AboutUs.html', {'form': ApplicationForm})
 
 
+def login(request):
+    return render(request, 'Auth.html', {'form': ApplicationForm})
+
+
+def security(request):
+    return render(request, 'Security.html', {'form': ApplicationForm})
+
+
+def aboutplatform(request):
+    return render(request, 'AboutPlatform.html', {'form': ApplicationForm})

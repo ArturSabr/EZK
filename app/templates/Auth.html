@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Единная Зачетная Книжка
+{% endblock %}
+{% block content %}
+    <section class="auth">
+      <div class="auth__content">
+        <div class="auth__item">
+          <h1>Авторизация</h1>
+          <div class="auth__fix">
+            <div class="auth__item">
+              <p>Email Почта</p>
+              <label class="offer__input">
+                <input type="text" placeholder="Введите вашу почту" />
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.1796 9.02065C10.1032 9.01301 10.0116 9.01301 9.92755 9.02065C8.10965 8.95954 6.66602 7.47008 6.66602 5.6369C6.66602 3.76553 8.17839 2.24551 10.0574 2.24551C11.9288 2.24551 13.4488 3.76553 13.4488 5.6369C13.4412 7.47008 11.9975 8.95954 10.1796 9.02065Z"
+                    stroke="#AAAAAA"
+                    stroke-width="1.07834"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6.35998 11.8392C4.51152 13.0766 4.51152 15.0931 6.35998 16.3228C8.4605 17.7282 11.9054 17.7282 14.0059 16.3228C15.8543 15.0854 15.8543 13.0689 14.0059 11.8392C11.913 10.4414 8.46814 10.4414 6.35998 11.8392Z"
+                    stroke="#AAAAAA"
+                    stroke-width="1.07834"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </label>
+            </div>
+            <div class="auth__item">
+              <p>Пароль</p>
+              <label class="offer__input">
+                <input type="text" placeholder="Введите ваш пароль" />
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.1796 9.02065C10.1032 9.01301 10.0116 9.01301 9.92755 9.02065C8.10965 8.95954 6.66602 7.47008 6.66602 5.6369C6.66602 3.76553 8.17839 2.24551 10.0574 2.24551C11.9288 2.24551 13.4488 3.76553 13.4488 5.6369C13.4412 7.47008 11.9975 8.95954 10.1796 9.02065Z"
+                    stroke="#AAAAAA"
+                    stroke-width="1.07834"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6.35998 11.8392C4.51152 13.0766 4.51152 15.0931 6.35998 16.3228C8.4605 17.7282 11.9054 17.7282 14.0059 16.3228C15.8543 15.0854 15.8543 13.0689 14.0059 11.8392C11.913 10.4414 8.46814 10.4414 6.35998 11.8392Z"
+                    stroke="#AAAAAA"
+                    stroke-width="1.07834"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </label>
+            </div>
+            <button class="auth__btn">Войти</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+.suggest {
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 100px;
+  }
+
+  &__info {
+    max-width: 475px;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+
+    p {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 35px;
+      letter-spacing: 0.05em;
+      color: #010851;
+    }
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .suggest {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__info {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .suggest {
+    &__info {
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}

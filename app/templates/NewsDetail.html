@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Единная Зачетная Книжка
+{% endblock %}
+{% block content %}
+    <section class="detail">
+        <div class="detail__container">
+            <div class="detail__content">
+                <div class="detail__img">
+                    <button>
+                        < Назад</button>
+                            <img src="{{ news.image.url }}" alt="">
+                </div>
+                <div class="detail__box">
+                    {{ news.body|safe }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

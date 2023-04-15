@@ -1,0 +1,59 @@
+.detail {
+  margin-top: 155px;
+
+  &__container {
+    max-width: 1262px;
+    margin: 0 auto;
+    background: #ececec;
+    border-radius: 48px;
+  }
+  img {
+    max-width: 100%;
+  }
+  h2 {
+    color: #010851;
+  }
+  button {
+    margin: 18px 0px 0px 32px;
+    position: fixed;
+    padding: 11px 52px;
+    font-family: "Jost";
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    background: #49a7eb;
+    border: 1px solid rgba(69, 68, 154, 0.2);
+    border-radius: 10px;
+    transition: 0.3s;
+
+    &:hover {
+      background: #ffffff;
+      color: #49a7eb;
+    }
+  }
+
+  &__box {
+    padding: 45px 128px;
+  }
+
+  p {
+    margin-top: 32px;
+    max-width: 968px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .detail {
+    &__box {
+      padding: 0 30px;
+    }
+  }
+}
+@media screen and (max-width: 410px) {
+  .detail {
+    &__box {
+      padding: 0 20px;
+    }
+  }
+}

@@ -45,3 +45,39 @@ class NewsModel(models.Model):
         ordering = ['-created_date']
         verbose_name = _('Новость')
         verbose_name_plural = _('Новости')
+
+
+class EventModel(models.Model):
+    title = models.CharField(verbose_name=_('Заголовок'),max_length=255)
+    body = models.TextField(verbose_name=_('Описание'),blank=True, null=True)
+    created_date = models.DateTimeField(verbose_name=_('Дата'),auto_now_add=True)
+    image = models.ImageField(verbose_name=_('Изображение'),upload_to='news/images')
+
+    def __str__(self):
+        return f'{self.title} | {self.date}'
+
+    def get_full_name(self):
+        return f'{self.title} {self.created_date}'
+
+    class Meta:
+        ordering = ['-created_date']
+        verbose_name = _('Ивент')
+        verbose_name_plural = _('Ивенты')
+
+
+class ConcursModel(models.Model):
+    title = models.CharField(verbose_name=_('Заголовок'),max_length=255)
+    body = models.TextField(verbose_name=_('Описание'),blank=True, null=True)
+    created_date = models.DateTimeField(verbose_name=_('Дата'),auto_now_add=True)
+    image = models.ImageField(verbose_name=_('Изображение'),upload_to='news/images')
+
+    def __str__(self):
+        return f'{self.title} | {self.date}'
+
+    def get_full_name(self):
+        return f'{self.title} {self.created_date}'
+
+    class Meta:
+        ordering = ['-created_date']
+        verbose_name = _('Конкурс')
+        verbose_name_plural = _('Конкурсы')

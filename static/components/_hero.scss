@@ -1,0 +1,101 @@
+.hero {
+  border-radius: 48px 48px 300px 48px;
+  font-family: "Jost";
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  max-width: 1520px;
+  margin: 170px auto 0 auto;
+  overflow: hidden;
+
+  &__content {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+
+    h1 {
+      font-weight: 700;
+      font-size: 70px;
+      line-height: 130%;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 130%;
+      margin: 57px 0;
+    }
+  }
+
+  &__info {
+    padding: 150px 0 150px 60px;
+    max-width: 718px;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 23px;
+
+    button {
+      background: #49a7eb;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 18px;
+      color: #ffffff;
+      border: 2px solid #49a7eb;
+      padding: 20px 30px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .hero {
+    &__img {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 963px) {
+  .hero {
+    &__img {
+      display: none;
+    }
+    &__info {
+      padding: 150px 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .hero {
+    &__info {
+      h1 {
+        font-size: 50px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .hero {
+    &__btns {
+      button {
+        font-size: 14px;
+      }
+    }
+  }
+}
