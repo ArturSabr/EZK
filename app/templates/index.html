@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 {% block title %}
-Единная Зачетная Книжка
+{% trans 'Единная Зачетная Книжка' %}
 {% endblock %}
 {% block content %}
     <section class="hero">
@@ -12,15 +13,13 @@
         "
       >
         <div class="hero__info">
-          <h1>Что такое Единая цифровая книжка?</h1>
+          <h1>{% trans 'Что такое Единая цифровая книжка?' %}</h1>
           <p>
-            Приложение ЕДИНАЯ ЦИФРОВАЯ ЗАЧЕТНАЯ КНИЖКА это доступ в режиме
-            онлайн к любой учебной информации, предоставленный преподавателям,
-            родителям и студентам.
+            {% trans 'Приложение ЕДИНАЯ ЦИФРОВАЯ ЗАЧЕТНАЯ КНИЖКА это доступ в режиме онлайн к любой учебной информации, предоставленный преподавателям, родителям и студентам.' %}
           </p>
           <div class="hero__btns">
-            <a href="{% url 'send_application' %}"><button>Подать зявку</button></a>
-            <a href="{% url 'aboutus' %}"><button>О нас</button></a>
+            <a href="{% url 'send_application' %}"><button>{% trans 'Подать зявку' %}</button></a>
+            <a href="{% url 'aboutus' %}"><button>{% trans 'О нас' %}</button></a>
           </div>
         </div>
         <div class="hero__img">
@@ -30,22 +29,22 @@
     </section>
     <section class="features">
       <div class="container">
-        <h2 class="title">Преимущества</h2>
+        <h2 class="title">{% trans 'Преимущества' %}</h2>
         <h3 class="features__suptitle">
-          Удобство: ЕЦЗК позволяет ученикам и студентам хранить все свои достижения в одном месте. Больше не нужно искать бумажные документы и просить их пересылку
+          {% trans 'Удобство: ЕЦЗК позволяет ученикам и студентам хранить все свои достижения в одном месте. Больше не нужно искать бумажные документы и просить их пересылку' %}
         </h3>
         <div class="features__content">
           <div class="features__item">
             <img src="{% static './img/features/img-1.png' %}" alt="" />
-            <p>Безопасность</p>
+            <p>{% trans 'Безопасность' %}</p>
           </div>
           <div class="features__item">
             <img src="{% static './img/features/img-2.png' %}" alt="" />
-            <p>Эффективность</p>
+            <p>{% trans 'Эффективность' %}</p>
           </div>
           <div class="features__item">
             <img src="{% static './img/features/img-3.png' %}" alt="" />
-            <p>Прозрачность</p>
+            <p>{% trans 'Прозрачность' %}</p>
           </div>
         </div>
       </div>
@@ -55,16 +54,16 @@
         <div class="security__content">
           <div class="security__info">
             <h2>
-              Безопасность <br />
+              {% trans 'Безопасность' %} <br />
               <span class="text-dark-blue"
-                >Время обезопасить <br />
-                себя и свои данные</span
+                >{% trans 'Время обезопасить' %} <br />
+                {% trans 'себя и свои данные' %}</span
               >
             </h2>
             <p>
-              Безопасность ЕЦЗК использует высокие стандарты безопасности и защиты данных, что позволяет ученикам и студентам быть уверенными в сохранности своих личных данных.
+              {% trans 'Безопасность ЕЦЗК использует высокие стандарты безопасности и защиты данных, что позволяет ученикам и студентам быть уверенными в сохранности своих личных данных.' %}
             </p>
-            <button class="btn">Подробнее</button>
+            <button class="btn">{% trans 'Подробнее' %}</button>
           </div>
           <div class="security__img">
             <img src="{% static './img/security/img.png' %}" alt="" />
@@ -74,7 +73,7 @@
     </section>
     <section class="news">
       <div class="container">
-        <h2 class="title">Новости</h2>
+        <h2 class="title">{% trans 'Новости' %}</h2>
         <div class="news__content">
           {% for i in news %}
           <div class="news__item">
@@ -84,7 +83,7 @@
               <p>
 
               </p>
-              <a href="{% url 'detail_news' i.pk %}"><button>Подробнее</button></a>
+              <a href="{% url 'detail_news' i.pk %}"><button>{% trans 'Подробнее' %}</button></a>
             </div>
           </div>
           {% endfor %}
@@ -99,13 +98,12 @@
           </div>
           <div class="security__info">
             <h2>
-              Более <span class="text-dark-blue">800 000+</span> Студентов
+              {% trans 'Более' %} <span class="text-dark-blue">800 000+</span> {% trans 'Студентов' %}
             </h2>
             <p>
-              В единой зачетной книжки зарегистрировано более +800.000 студентов
-              по всему КР
+              {% trans 'В единой зачетной книжки зарегистрировано более +800.000 студентов по всему КР' %}
             </p>
-            <a href="{% url 'send_application' %}"><button class="btn">Подать заявку</button></a>
+            <a href="{% url 'send_application' %}"><button class="btn">{% trans 'Подать заявку' %}</button></a>
           </div>
         </div>
       </div>
@@ -118,15 +116,10 @@
           </div>
           <div class="suggest__info">
             <p>
-              Приложение ЕДИНАЯ ЦИФРОВАЯ ЗАЧЕТНАЯ КНИЖКА это доступ в режиме
-              онлайн к любой учебной информации, предоставленный преподавателям,
-              родителям и студентам.
+              {% trans 'Приложение ЕДИНАЯ ЦИФРОВАЯ ЗАЧЕТНАЯ КНИЖКА это доступ в режиме онлайн к любой учебной информации, предоставленный преподавателям, родителям и студентам.' %}
             </p>
             <p>
-              Мы предлагаем интегрировать цифровую систему в образование,
-              благодаря чему будет реализовано информирование по всем учебным
-              процессам, университетской жизни студента, изменениями расписания
-              и ведомость в режиме онлайн.
+              {% trans 'Мы предлагаем интегрировать цифровую систему в образование, благодаря чему будет реализовано информирование по всем учебным процессам, университетской жизни студента, изменениями расписания и ведомость в режиме онлайн.' %}
             </p>
           </div>
         </div>
@@ -135,29 +128,28 @@
     <section class="live">
       <div class="container">
         <h2 class="title">
-          Вся жизнь студента в <br />
-          <span class="text-blue">приложении</span>
+          {% trans 'Вся жизнь студента в' %} <br />
+          <span class="text-blue">{% trans 'приложении' %}</span>
         </h2>
         <div class="live__content">
           <div class="live__pills">
-            <div class="pill purple">Дайджест мероприятий</div>
-            <div class="pill blue">Бонусы и скидки</div>
-            <div class="pill green">Учебные сервисы</div>
-            <div class="pill red">Личный кабинет</div>
+            <div class="pill purple">{% trans 'Дайджест мероприятий' %}</div>
+            <div class="pill blue">{% trans 'Бонусы и скидки' %}</div>
+            <div class="pill green">{% trans 'Учебные сервисы' %}</div>
+            <div class="pill red">{% trans 'Личный кабинет' %}</div>
           </div>
           <div class="live__img">
             <img src="{% static './img/live/img.png' %}" alt="" />
           </div>
           <div class="live__pills">
-            <div class="pill purple">Вакансии и стажировки</div>
-            <div class="pill blue">Портфолио и резюме</div>
-            <div class="pill green">Карта студента</div>
-            <div class="pill red">База знаний</div>
+            <div class="pill purple">{% trans 'Вакансии и стажировки' %}</div>
+            <div class="pill blue">{% trans 'Портфолио и резюме' %}</div>
+            <div class="pill green">{% trans 'Карта студента' %}</div>
+            <div class="pill red">{% trans 'База знаний' %}</div>
           </div>
         </div>
         <p class="live__info">
-          МОБИЛЬНОЕ ПРИЛОЖЕНИЕ - ПЛАТФОРМА ИНТЕГРАЦИИИСОДЕРЖАНИ Я КЛЮЧЕВЫХ
-          ФУНКЦИЙ , СЕРВИСОВИПРОГРАММ ДЛЯ СТУДЕНТОВ
+          {% trans 'МОБИЛЬНОЕ ПРИЛОЖЕНИЕ - ПЛАТФОРМА ИНТЕГРАЦИИИСОДЕРЖАНИ Я КЛЮЧЕВЫХ ФУНКЦИЙ , СЕРВИСОВИПРОГРАММ ДЛЯ СТУДЕНТОВ' %}
         </p>
       </div>
     </section>
@@ -168,10 +160,10 @@
             <img src="{% static './img/func/img.png' %}" alt="" />
           </div>
           <div class="func__pills">
-            <div class="pill blue">Мероприятия в твоем телефоне</div>
-            <div class="pill blue">Участвуй и повышай свой уровень</div>
-            <div class="pill blue">Новый уровень - новый бонус</div>
-            <div class="pill blue">Твой опыт резюмируется для карьеры</div>
+            <div class="pill blue">{% trans 'Мероприятия в твоем телефоне' %}</div>
+            <div class="pill blue">{% trans 'Участвуй и повышай свой уровень' %}</div>
+            <div class="pill blue">{% trans 'Новый уровень - новый бонус' %}</div>
+            <div class="pill blue">{% trans 'Твой опыт резюмируется для карьеры' %}</div>
           </div>
         </div>
       </div>
@@ -181,10 +173,10 @@
         <div class="choose__content">
           <div class="choose__info">
             <h2>
-              Проблема карьерного
-              <span class="text-blue">самоопределения</span>
+              {% trans 'Проблема карьерного' %}
+              <span class="text-blue">{% trans 'самоопределения' %}</span>
             </h2>
-            <p>Cталкиваются ≈27% студентов</p>
+            <p>{% trans 'Cталкиваются ≈27% студентов' %}</p>
           </div>
           <div class="choose__img">
             <img src="{% static './img/choose/img.png' %}" alt="" />
@@ -194,26 +186,24 @@
     </section>
     <section class="vision">
       <div class="container">
-        <h2 class="title">Как мы это видим</h2>
+        <h2 class="title">{% trans 'Как мы это видим' %}</h2>
         <div class="vision__content">
           <div class="vision__pills">
             <div class="pill purple">
-              1.Студент принимает участие в мероприятиях
+              {% trans '1. Студент принимает участие в мероприятиях' %}
             </div>
-            <div class="pill blue">2.Система формирует сетку навыков</div>
+            <div class="pill blue">{% trans '2. Система формирует сетку навыков' %}</div>
             <div class="pill purple">
-              3.Алгоритм предлагает персонализированную подборку вакансий
+              {% trans '3. Алгоритм предлагает персонализированную подборку вакансий' %}
             </div>
             <div class="pill blue">
-              4.Платформа помогает создать резюме под конкретную должность
+              {% trans '4. Платформа помогает создать резюме под конкретную должность' %}
             </div>
             <div class="pill purple">
-              5.Для повышения квалификация платформа предлагает актуальные
-              стажировки
+              {% trans '5. Для повышения квалификация платформа предлагает актуальные стажировки' %}
             </div>
             <div class="pill red">
-              6.Студент-активист получает гораздо больше шансов быть
-              приглашенным на собеседование
+              {% trans '6. Студент-активист получает гораздо больше шансов быть приглашенным на собеседование' %}
             </div>
           </div>
         </div>
@@ -222,39 +212,37 @@
     <section class="control">
       <div class="container">
         <h2 class="title">
-          <span class="text-blue">Проблема родительского контроля</span>
+          <span class="text-blue">{% trans 'Проблема родительского контроля' %}</span>
         </h2>
         <div class="control__content">
           <div class="control__img">
             <img src="{% static './img/control/img.png' %}" alt="" />
           </div>
           <div class="control__info">
-            <div class="pill purple">Уведомления о пропуске занятий</div>
-            <div class="pill green">Достижения и выговоры студентов</div>
-            <div class="pill red">Успеваемость онлайн</div>
+            <div class="pill purple">{% trans 'Уведомления о пропуске занятий' %}</div>
+            <div class="pill green">{% trans 'Достижения и выговоры студентов' %}</div>
+            <div class="pill red">{% trans 'Успеваемость онлайн' %}</div>
           </div>
         </div>
         <p>
-          Электронная цифровая книга позволяет родителям держать руку на пульсе
-          и быть в курсе успеваемости своих детей, их достижений, оплаты за
-          обучение
+          {% trans 'Электронная цифровая книга позволяет родителям держать руку на пульсе и быть в курсе успеваемости своих детей, их достижений, оплаты за обучение' %}
         </p>
       </div>
     </section>
     <section class="control">
       <div class="container">
         <h2 class="title">
-          Проблема систематизации и <br />
-          <span class="text-blue">упрощения учебных процессов</span>
+          {% trans 'Проблема систематизации и' %} <br />
+          <span class="text-blue">{% trans 'упрощения учебных процессов' %}</span>
         </h2>
         <div class="control__content">
           <div class="control__img">
             <img src="{% static './img/control/img-2.png' %}" alt="" />
           </div>
           <div class="control__info">
-            <div class="pill blue">Видимость в режиме онлайн</div>
-            <div class="pill blue">Изменения в расписании</div>
-            <div class="pill purple">Упрощение работы на всех уроках</div>
+            <div class="pill blue">{% trans 'Видимость в режиме онлайн' %}</div>
+            <div class="pill blue">{% trans 'Изменения в расписании' %}</div>
+            <div class="pill purple">{% trans 'Упрощение работы на всех уроках' %}</div>
           </div>
         </div>
       </div>
@@ -263,10 +251,8 @@
       <div class="container">
         <div class="statistic__content">
           <h2>
-            <span class="text-blue">Централизованное хранение данных,</span>
-            статистика по всем учебным за ведениям и студентам, возможность
-            отслеживания успеваемости и внутривизовой
-            <span class="text-dark-blue">жизни студента</span>
+            <span class="text-blue">{% trans 'Централизованное хранение данных,' %}</span>{% trans ' статистика по всем учебным за ведениям и студентам, возможность отслеживания успеваемости и внутривизовой' %}
+            <span class="text-dark-blue">{% trans 'жизни студента' %}</span>
           </h2>
           <div class="statistic__img">
             <img src="{% static './img/statistic/img.png' %}" alt="" />
@@ -278,12 +264,11 @@
       <div class="every__content">
         <div class="every__box">
           <div class="every__left">
-            <h2>Каждый студент и родитель могут опробовать это на себе.</h2>
+            <h2>{% trans 'Каждый студент и родитель могут опробовать это на себе.' %}</h2>
             <p>
-              Каждый студент, родитель и преподаватель могут опробовать это на
-              себе и узнать насколько это удобно и важно.
+              {% trans 'Каждый студент, родитель и преподаватель могут опробовать это на себе и узнать насколько это удобно и важно.' %}
             </p>
-            <a href="{% url 'send_application' %}"><button>Подать заявку</button></a>
+            <a href="{% url 'send_application' %}"><button>{% trans 'Подать заявку' %}</button></a>
           </div>
           <div class="every__right">
             <img src="{% static './img/every/img.png' %}" alt="" />
@@ -298,10 +283,10 @@
         </div>
         <div class="offer__right">
           <form action="{% url 'send_application' %}" method="post">
-          <h2>Подать заявку</h2>
+          <h2>{% trans 'Подать заявку' %}</h2>
           <div class="offer__fix">
             <div class="offer__item">
-              <p>Введите ваше имя</p>
+              <p>{% trans 'Введите ваше имя' %}</p>
               <label class="offer__input">
                 {{ form.first_name }}
                 <svg
@@ -329,7 +314,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>Введите ваше фамилию</p>
+              <p>{% trans 'Введите ваше фамилию' %}</p>
               <label class="offer__input">
                 {{ form.last_name }}
                 <svg
@@ -357,7 +342,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>Введите ваше отчество</p>
+              <p>{% trans 'Введите ваше отчество' %}</p>
               <label class="offer__input">
                 {{ form.middle_name }}
                 <svg
@@ -385,7 +370,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>Дата рождения</p>
+              <p>{% trans 'Дата рождения' %}</p>
               <label class="offer__input">
                 {{ form.age }}
                 <svg
@@ -413,7 +398,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>Адрес по прописке</p>
+              <p>{% trans 'Адрес по прописке' %}</p>
               <label class="offer__input">
                 {{ form.address }}
                 <svg
@@ -441,7 +426,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>Фактический адрес</p>
+              <p>{% trans 'Фактический адрес' %}</p>
               <label class="offer__input">
                 {{ form.real_address }}
                 <svg
@@ -469,7 +454,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>В каком колледже, техникуме лицее вы учитесь?</p>
+              <p>{% trans 'В каком колледже, техникуме лицее вы учитесь?' %}</p>
               <label class="offer__input">
                 {{ form.education }}
                 <svg
@@ -497,7 +482,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>На каком вы курсе?</p>
+              <p>{% trans 'На каком вы курсе?' %}</p>
               <label class="offer__input">
                 {{ form.course }}
                 <svg
@@ -525,7 +510,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>Cпециальность</p>
+              <p>{% trans 'Cпециальность' %}</p>
               <label class="offer__input">
                 {{ form.speciality }}
                 <svg
@@ -553,7 +538,35 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>Контакты отца</p>
+              <p>{% trans 'Контакты' %}</p>
+              <label class="offer__input">
+                {{ form.contact }}
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.1796 9.02065C10.1032 9.01301 10.0116 9.01301 9.92755 9.02065C8.10965 8.95954 6.66602 7.47008 6.66602 5.6369C6.66602 3.76553 8.17839 2.24551 10.0574 2.24551C11.9288 2.24551 13.4488 3.76553 13.4488 5.6369C13.4412 7.47008 11.9975 8.95954 10.1796 9.02065Z"
+                    stroke="#AAAAAA"
+                    stroke-width="1.07834"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6.35998 11.8392C4.51152 13.0766 4.51152 15.0931 6.35998 16.3228C8.4605 17.7282 11.9054 17.7282 14.0059 16.3228C15.8543 15.0854 15.8543 13.0689 14.0059 11.8392C11.913 10.4414 8.46814 10.4414 6.35998 11.8392Z"
+                    stroke="#AAAAAA"
+                    stroke-width="1.07834"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </label>
+            </div>
+            <div class="offer__item">
+              <p>{% trans 'Контакты отца' %}</p>
               <label class="offer__input">
                 {{ form.contact_dad }}
                 <svg
@@ -581,7 +594,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>Контакты матери</p>
+              <p>{% trans 'Контакты матери' %}</p>
               <label class="offer__input">
                 {{ form.contact_mam }}
                 <svg
@@ -609,7 +622,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>Коментарий</p>
+              <p>{% trans 'Коментарий' %}</p>
               <label class="offer__input">
                 {{ form.comment }}
                 <svg
@@ -636,9 +649,37 @@
                 </svg>
               </label>
             </div>
+            <div class="offer__item">
+              <p>{% trans 'Город' %}</p>
+              <label class="offer__input">
+                {{ form.city }}
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.1796 9.02065C10.1032 9.01301 10.0116 9.01301 9.92755 9.02065C8.10965 8.95954 6.66602 7.47008 6.66602 5.6369C6.66602 3.76553 8.17839 2.24551 10.0574 2.24551C11.9288 2.24551 13.4488 3.76553 13.4488 5.6369C13.4412 7.47008 11.9975 8.95954 10.1796 9.02065Z"
+                    stroke="#AAAAAA"
+                    stroke-width="1.07834"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6.35998 11.8392C4.51152 13.0766 4.51152 15.0931 6.35998 16.3228C8.4605 17.7282 11.9054 17.7282 14.0059 16.3228C15.8543 15.0854 15.8543 13.0689 14.0059 11.8392C11.913 10.4414 8.46814 10.4414 6.35998 11.8392Z"
+                    stroke="#AAAAAA"
+                    stroke-width="1.07834"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </label>
+            </div>
           </div>
 
-          <button type="submit">Подать заявку</button>
+          <button type="submit">{% trans 'Подать заявку' %}</button>
           </form>
         </div>
       </div>

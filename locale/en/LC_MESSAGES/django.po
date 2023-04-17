@@ -1,0 +1,394 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-17 15:23+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\app\models.py:6
+msgid "Имя"
+msgstr ""
+
+#: .\app\models.py:7
+msgid "Фамилия"
+msgstr ""
+
+#: .\app\models.py:8
+msgid "Отчество"
+msgstr ""
+
+#: .\app\models.py:9 .\app\templates\index.html:374
+msgid "Дата рождения"
+msgstr ""
+
+#: .\app\models.py:10 .\app\templates\index.html:402
+msgid "Адрес по прописке"
+msgstr ""
+
+#: .\app\models.py:11 .\app\templates\index.html:430
+msgid "Фактический адрес"
+msgstr ""
+
+#: .\app\models.py:12 .\app\templates\index.html:458
+msgid "В каком колледже, техникуме лицее вы учитесь?"
+msgstr ""
+
+#: .\app\models.py:13
+msgid "На каком вы курсе"
+msgstr ""
+
+#: .\app\models.py:14 .\app\templates\index.html:514
+msgid "Cпециальность"
+msgstr ""
+
+#: .\app\models.py:15 .\app\templates\index.html:542
+msgid "Контакты отца"
+msgstr ""
+
+#: .\app\models.py:16 .\app\templates\index.html:570
+msgid "Контакты матери"
+msgstr ""
+
+#: .\app\models.py:17 .\app\templates\index.html:598
+msgid "Коментарий"
+msgstr ""
+
+#: .\app\models.py:28
+msgid "Заявка"
+msgstr ""
+
+#: .\app\models.py:29
+msgid "Заявки"
+msgstr ""
+
+#: .\app\models.py:33 .\app\models.py:51 .\app\models.py:69
+msgid "Заголовок"
+msgstr ""
+
+#: .\app\models.py:34 .\app\models.py:52 .\app\models.py:70
+msgid "Описание"
+msgstr ""
+
+#: .\app\models.py:35 .\app\models.py:53 .\app\models.py:71
+msgid "Дата"
+msgstr ""
+
+#: .\app\models.py:36 .\app\models.py:54 .\app\models.py:72
+msgid "Изображение"
+msgstr ""
+
+#: .\app\models.py:46
+msgid "Новость"
+msgstr ""
+
+#: .\app\models.py:47 .\app\templates\base.html:47
+#: .\app\templates\index.html:76
+msgid "Новости"
+msgstr ""
+
+#: .\app\models.py:64
+msgid "Ивент"
+msgstr ""
+
+#: .\app\models.py:65
+msgid "Ивенты"
+msgstr ""
+
+#: .\app\models.py:82
+msgid "Конкурс"
+msgstr ""
+
+#: .\app\models.py:83
+msgid "Конкурсы"
+msgstr ""
+
+#: .\app\templates\base.html:46 .\app\templates\base.html:119
+msgid "О платформе"
+msgstr ""
+
+#: .\app\templates\base.html:48 .\app\templates\index.html:39
+#: .\app\templates\index.html:57
+msgid "Безопасность"
+msgstr ""
+
+#: .\app\templates\base.html:49 .\app\templates\index.html:22
+msgid "О нас"
+msgstr ""
+
+#: .\app\templates\base.html:97 .\app\templates\base.html:125
+#: .\app\templates\index.html:106 .\app\templates\index.html:272
+#: .\app\templates\index.html:287 .\app\templates\index.html:627
+msgid "Подать заявку"
+msgstr ""
+
+#: .\app\templates\index.html:5
+msgid "Единная Зачетная Книжка"
+msgstr ""
+
+#: .\app\templates\index.html:16
+msgid "Что такое Единая цифровая книжка?"
+msgstr ""
+
+#: .\app\templates\index.html:18 .\app\templates\index.html:119
+msgid ""
+"Приложение ЕДИНАЯ ЦИФРОВАЯ ЗАЧЕТНАЯ КНИЖКА это доступ в режиме онлайн к "
+"любой учебной информации, предоставленный преподавателям, родителям и "
+"студентам."
+msgstr ""
+
+#: .\app\templates\index.html:21
+msgid "Подать зявку"
+msgstr ""
+
+#: .\app\templates\index.html:32
+msgid "Преимущества"
+msgstr ""
+
+#: .\app\templates\index.html:34
+msgid ""
+"Удобство: ЕЦЗК позволяет ученикам и студентам хранить все свои достижения в "
+"одном месте. Больше не нужно искать бумажные документы и просить их пересылку"
+msgstr ""
+
+#: .\app\templates\index.html:43
+msgid "Эффективность"
+msgstr ""
+
+#: .\app\templates\index.html:47
+msgid "Прозрачность"
+msgstr ""
+
+#: .\app\templates\index.html:59
+msgid "Время обезопасить"
+msgstr ""
+
+#: .\app\templates\index.html:60
+msgid "себя и свои данные"
+msgstr ""
+
+#: .\app\templates\index.html:64
+msgid ""
+"Безопасность ЕЦЗК использует высокие стандарты безопасности и защиты данных, "
+"что позволяет ученикам и студентам быть уверенными в сохранности своих "
+"личных данных."
+msgstr ""
+
+#: .\app\templates\index.html:66 .\app\templates\index.html:86
+msgid "Подробнее"
+msgstr ""
+
+#: .\app\templates\index.html:101
+msgid "Более"
+msgstr ""
+
+#: .\app\templates\index.html:101
+msgid "Студентов"
+msgstr ""
+
+#: .\app\templates\index.html:104
+msgid ""
+"В единой зачетной книжки зарегистрировано более +800.000 студентов по всему "
+"КР"
+msgstr ""
+
+#: .\app\templates\index.html:122
+msgid ""
+"Мы предлагаем интегрировать цифровую систему в образование, благодаря чему "
+"будет реализовано информирование по всем учебным процессам, университетской "
+"жизни студента, изменениями расписания и ведомость в режиме онлайн."
+msgstr ""
+
+#: .\app\templates\index.html:131
+msgid "Вся жизнь студента в"
+msgstr ""
+
+#: .\app\templates\index.html:132
+msgid "приложении"
+msgstr ""
+
+#: .\app\templates\index.html:136
+msgid "Дайджест мероприятий"
+msgstr ""
+
+#: .\app\templates\index.html:137
+msgid "Бонусы и скидки"
+msgstr ""
+
+#: .\app\templates\index.html:138
+msgid "Учебные сервисы"
+msgstr ""
+
+#: .\app\templates\index.html:139
+msgid "Личный кабинет"
+msgstr ""
+
+#: .\app\templates\index.html:145
+msgid "Вакансии и стажировки"
+msgstr ""
+
+#: .\app\templates\index.html:146
+msgid "Портфолио и резюме"
+msgstr ""
+
+#: .\app\templates\index.html:147
+msgid "Карта студента"
+msgstr ""
+
+#: .\app\templates\index.html:148
+msgid "База знаний"
+msgstr ""
+
+#: .\app\templates\index.html:152
+msgid ""
+"МОБИЛЬНОЕ ПРИЛОЖЕНИЕ - ПЛАТФОРМА ИНТЕГРАЦИИИСОДЕРЖАНИ Я КЛЮЧЕВЫХ ФУНКЦИЙ , "
+"СЕРВИСОВИПРОГРАММ ДЛЯ СТУДЕНТОВ"
+msgstr ""
+
+#: .\app\templates\index.html:163
+msgid "Мероприятия в твоем телефоне"
+msgstr ""
+
+#: .\app\templates\index.html:164
+msgid "Участвуй и повышай свой уровень"
+msgstr ""
+
+#: .\app\templates\index.html:165
+msgid "Новый уровень - новый бонус"
+msgstr ""
+
+#: .\app\templates\index.html:166
+msgid "Твой опыт резюмируется для карьеры"
+msgstr ""
+
+#: .\app\templates\index.html:177
+msgid "самоопределения"
+msgstr ""
+
+#: .\app\templates\index.html:179
+#, python-format
+msgid "Cталкиваются ≈27%% студентов"
+msgstr ""
+
+#: .\app\templates\index.html:189
+msgid "Как мы это видим"
+msgstr ""
+
+#: .\app\templates\index.html:193
+msgid "1. Студент принимает участие в мероприятиях"
+msgstr ""
+
+#: .\app\templates\index.html:195
+msgid "2. Система формирует сетку навыков"
+msgstr ""
+
+#: .\app\templates\index.html:197
+msgid "3. Алгоритм предлагает персонализированную подборку вакансий"
+msgstr ""
+
+#: .\app\templates\index.html:200
+msgid "4. Платформа помогает создать резюме под конкретную должность"
+msgstr ""
+
+#: .\app\templates\index.html:203
+msgid ""
+"5. Для повышения квалификация платформа предлагает актуальные стажировки"
+msgstr ""
+
+#: .\app\templates\index.html:206
+msgid ""
+"6. Студент-активист получает гораздо больше шансов быть приглашенным на "
+"собеседование"
+msgstr ""
+
+#: .\app\templates\index.html:215
+msgid "Проблема родительского контроля"
+msgstr ""
+
+#: .\app\templates\index.html:222
+msgid "Уведомления о пропуске занятий"
+msgstr ""
+
+#: .\app\templates\index.html:223
+msgid "Достижения и выговоры студентов"
+msgstr ""
+
+#: .\app\templates\index.html:224
+msgid "Успеваемость онлайн"
+msgstr ""
+
+#: .\app\templates\index.html:228
+msgid ""
+"Электронная цифровая книга позволяет родителям держать руку на пульсе и быть "
+"в курсе успеваемости своих детей, их достижений, оплаты за обучение"
+msgstr ""
+
+#: .\app\templates\index.html:235
+msgid "Проблема систематизации и"
+msgstr ""
+
+#: .\app\templates\index.html:236
+msgid "упрощения учебных процессов"
+msgstr ""
+
+#: .\app\templates\index.html:243
+msgid "Видимость в режиме онлайн"
+msgstr ""
+
+#: .\app\templates\index.html:244
+msgid "Изменения в расписании"
+msgstr ""
+
+#: .\app\templates\index.html:245
+msgid "Упрощение работы на всех уроках"
+msgstr ""
+
+#: .\app\templates\index.html:254
+msgid ""
+"Централизованное хранение данных,</span> статистика по всем учебным за "
+"ведениям и студентам, возможность отслеживания успеваемости и внутривизовой"
+msgstr ""
+
+#: .\app\templates\index.html:267
+msgid "Каждый студент и родитель могут опробовать это на себе."
+msgstr ""
+
+#: .\app\templates\index.html:290
+msgid "Введите ваше имя"
+msgstr ""
+
+#: .\app\templates\index.html:318
+msgid "Введите ваше фамилию"
+msgstr ""
+
+#: .\app\templates\index.html:346
+msgid "Введите ваше отчество"
+msgstr ""
+
+#: .\app\templates\index.html:486
+msgid "На каком вы курсе?"
+msgstr ""
+
+#: .\ezk\settings.py:210
+msgid "English"
+msgstr ""
+
+#: .\ezk\settings.py:211
+msgid "Russian"
+msgstr ""
+
+#: .\ezk\settings.py:212
+msgid "Kyrgyz"
+msgstr ""

@@ -19,4 +19,5 @@ urlpatterns = [
     path('aboutplatform/', aboutplatform, name='AboutPlatform'),
     path('security/', security, name='security'),
     path('success/', ApplicationSendSuccessView.as_view(), name='success'),
+    path('crm/', ApplicationListCRMView.as_view(), name='crm'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

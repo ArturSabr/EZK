@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load i18n %}
 {% load static %}
 <html lang="en">
   <head>
@@ -42,14 +43,20 @@
             </svg></a>
           </div>
           <ul>
-            <li><a href="{% url 'AboutPlatform' %}">О платформе</a></li>
-            <li><a href="{% url 'news' %}">Новости</a></li>
-            <li><a href="{% url 'security' %}">Безопасность</a></li>
-            <li><a href="{% url 'aboutus' %}">О нас</a></li>
+            <li><a href="{% url 'AboutPlatform' %}">{% trans 'О платформе' %}</a></li>
+            <li><a href="{% url 'news' %}">{% trans 'Новости' %}</a></li>
+            <li><a href="{% url 'security' %}">{% trans 'Безопасность' %}</a></li>
+            <li><a href="{% url 'aboutus' %}">{% trans 'О нас' %}</a></li>
           </ul>
         </div>
         <div class="header__block">
           <div>
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_language_info for LANGUAGE_CODE as lang %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+
+
             <svg
               width="22"
               height="21"
@@ -76,16 +83,18 @@
                 stroke-linejoin="round"
               />
             </svg>
-            <p>Russian</p>
+            <p>{{ lang.name_local }}</p>
           </div>
+
           <div class="lang-active">
-            <div class="lang-option">English</div>
+            {% for lang in languages %}
+              <div class="lang-option"><a href="/{{ lang.code }}/">{{ lang.name_local }}</a></div>
             <hr>
-            <div class="lang-option">Кыргызский</div>
-            <hr>
-            <div class="lang-option">Русский</div>
+
+            {% endfor %}
+
           </div>
-          <a href="send_application"><button>Подать заявку</button></a>
+          <a href="send_application"><button>{% trans 'Подать заявку' %}</button></a>
         </div>
         <svg
           width="36"
@@ -107,13 +116,13 @@
     </header>
     <div class="burger">
       <nav>
-        <a href="" class="active"> О платформе </a>
+        <a href="" class="active">{% trans 'О платформе' %}</a>
         <a href="">Новости</a>
         <a href="">Безопасность</a>
         <a href=""> О нас </a>
       </nav>
       <div class="burger__bottom">
-        <a href="{% url 'send_application' %}"><button>Подать заявку</button></a>
+        <a href="{% url 'send_application' %}"><button>{% trans 'Подать заявку' %}</button></a>
       </div>
     </div>
 

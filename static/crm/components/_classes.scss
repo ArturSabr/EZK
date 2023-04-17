@@ -1,0 +1,45 @@
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #010851;
+}
+
+.text-dark-blue {
+    color: #8D64DC;
+}
+
+.text-blue{
+    color: #49a7eb;
+}
+.text-red{
+    color: #D0004B;
+}
+.text-green{
+    color: #00AC4F;
+}
+.btn {
+    background: #8d64dc;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    padding: 18px 40px;
+    border: 2px solid #8d64dc;
+    transition: .3s;
+
+    &:hover {
+        background: transparent;
+        color: #8d64dc;
+    }
+}

@@ -97,3 +97,12 @@ def security(request):
 
 def aboutplatform(request):
     return render(request, 'AboutPlatform.html', {'form': ApplicationForm})
+
+
+class ApplicationListCRMView(ListView):
+    template_name = 'crm.html'
+    queryset = ApplicationModel.objects.all()
+    model = ApplicationModel
+    context_object_name = 'Applications'
+
+
