@@ -283,12 +283,12 @@
         </div>
         <div class="offer__right">
           <form action="{% url 'send_application' %}" method="post">
-          <h2>{% trans 'Подать заявку' %}</h2>
+          <h2>Подать заявку</h2>
           <div class="offer__fix">
             <div class="offer__item">
-              <p>{% trans 'Введите ваше имя' %}</p>
+              <p>Введите ваше имя</p>
               <label class="offer__input">
-                {{ form.first_name }}
+                {{ form.first_name }}{% csrf_token %}
                 <svg
                   width="20"
                   height="20"
@@ -314,7 +314,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>{% trans 'Введите ваше фамилию' %}</p>
+              <p>Введите ваше фамилию</p>
               <label class="offer__input">
                 {{ form.last_name }}
                 <svg
@@ -342,7 +342,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>{% trans 'Введите ваше отчество' %}</p>
+              <p>Введите ваше отчество</p>
               <label class="offer__input">
                 {{ form.middle_name }}
                 <svg
@@ -370,7 +370,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>{% trans 'Дата рождения' %}</p>
+              <p>Дата рождения</p>
               <label class="offer__input">
                 {{ form.age }}
                 <svg
@@ -398,7 +398,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>{% trans 'Адрес по прописке' %}</p>
+              <p>Адрес по прописке</p>
               <label class="offer__input">
                 {{ form.address }}
                 <svg
@@ -426,7 +426,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>{% trans 'Фактический адрес' %}</p>
+              <p>Фактический адрес</p>
               <label class="offer__input">
                 {{ form.real_address }}
                 <svg
@@ -454,7 +454,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>{% trans 'В каком колледже, техникуме лицее вы учитесь?' %}</p>
+              <p>В каком колледже, техникуме лицее вы учитесь?</p>
               <label class="offer__input">
                 {{ form.education }}
                 <svg
@@ -482,7 +482,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>{% trans 'На каком вы курсе?' %}</p>
+              <p>На каком вы курсе?</p>
               <label class="offer__input">
                 {{ form.course }}
                 <svg
@@ -510,7 +510,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>{% trans 'Cпециальность' %}</p>
+              <p>Cпециальность</p>
               <label class="offer__input">
                 {{ form.speciality }}
                 <svg
@@ -538,35 +538,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>{% trans 'Контакты' %}</p>
-              <label class="offer__input">
-                {{ form.contact }}
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.1796 9.02065C10.1032 9.01301 10.0116 9.01301 9.92755 9.02065C8.10965 8.95954 6.66602 7.47008 6.66602 5.6369C6.66602 3.76553 8.17839 2.24551 10.0574 2.24551C11.9288 2.24551 13.4488 3.76553 13.4488 5.6369C13.4412 7.47008 11.9975 8.95954 10.1796 9.02065Z"
-                    stroke="#AAAAAA"
-                    stroke-width="1.07834"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M6.35998 11.8392C4.51152 13.0766 4.51152 15.0931 6.35998 16.3228C8.4605 17.7282 11.9054 17.7282 14.0059 16.3228C15.8543 15.0854 15.8543 13.0689 14.0059 11.8392C11.913 10.4414 8.46814 10.4414 6.35998 11.8392Z"
-                    stroke="#AAAAAA"
-                    stroke-width="1.07834"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </label>
-            </div>
-            <div class="offer__item">
-              <p>{% trans 'Контакты отца' %}</p>
+              <p>Контакты отца</p>
               <label class="offer__input">
                 {{ form.contact_dad }}
                 <svg
@@ -594,7 +566,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>{% trans 'Контакты матери' %}</p>
+              <p>Контакты матери</p>
               <label class="offer__input">
                 {{ form.contact_mam }}
                 <svg
@@ -622,7 +594,7 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>{% trans 'Коментарий' %}</p>
+              <p>Коментарий</p>
               <label class="offer__input">
                 {{ form.comment }}
                 <svg
@@ -650,9 +622,37 @@
               </label>
             </div>
             <div class="offer__item">
-              <p>{% trans 'Город' %}</p>
+              <p>Контакты </p>
               <label class="offer__input">
-                {{ form.city }}
+                {{ form.contact }}
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.1796 9.02065C10.1032 9.01301 10.0116 9.01301 9.92755 9.02065C8.10965 8.95954 6.66602 7.47008 6.66602 5.6369C6.66602 3.76553 8.17839 2.24551 10.0574 2.24551C11.9288 2.24551 13.4488 3.76553 13.4488 5.6369C13.4412 7.47008 11.9975 8.95954 10.1796 9.02065Z"
+                    stroke="#AAAAAA"
+                    stroke-width="1.07834"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6.35998 11.8392C4.51152 13.0766 4.51152 15.0931 6.35998 16.3228C8.4605 17.7282 11.9054 17.7282 14.0059 16.3228C15.8543 15.0854 15.8543 13.0689 14.0059 11.8392C11.913 10.4414 8.46814 10.4414 6.35998 11.8392Z"
+                    stroke="#AAAAAA"
+                    stroke-width="1.07834"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </label>
+            </div>
+            <div class="offer__item">
+              <p>Почта</p>
+              <label class="offer__input">
+                {{ form.email }}
                 <svg
                   width="20"
                   height="20"
@@ -678,8 +678,8 @@
               </label>
             </div>
           </div>
-
-          <button type="submit">{% trans 'Подать заявку' %}</button>
+          <h4>{{ form.errors }}</h4>
+          <button>Подать заявку</button>
           </form>
         </div>
       </div>

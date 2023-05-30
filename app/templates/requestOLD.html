@@ -8,13 +8,13 @@
                     <img draggable="false" src="{% static './components/img/general/time.png' %}" alt="">
                 </div>
                 <div class="form__left">
-                    <form action="" method="post" enctype="application/x-www-form-urlencoded">{% csrf_token %}
-                    <h1 class="form__title">Подать заявку</h1>
+                    <form action="" method="post">
+                    <h1 class="form__title">Подать заявку {{ csrf_token }}</h1>
                     <div class="form__fix">
                         <div class="form__item">
                             <p class="form__info">Имя</p>
                             <label class="form__label">
-                                {{ form.first_name }}
+                                {{ form.first_name }}{% csrf_token %}
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path

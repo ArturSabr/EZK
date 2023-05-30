@@ -1,8 +1,13 @@
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+
 from .models import *
 from django.views.generic import ListView, DetailView, CreateView
 from .forms import *
 from django.urls import reverse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+import requests
+from django.utils.decorators import method_decorator
 
 
 class Home(ListView):
@@ -66,11 +71,27 @@ class SendApplicationView(CreateView):
     template_name = 'Offer.html'
     form_class = ApplicationForm
 
-    def get_success_url(self):
-        return reverse('success')
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     return context
+    def post(self, request, *args, **kwargs):
+        form = self.get_form()
+        if form.is_valid():
+            data = form.save(commit=False)
+            try:
+                data.save()
+            except:
+                return HttpResponse('Error')
+            payload = {
+                'chat_id': '-1001900947104',
+                'text': f'Заявка была отправлена от - {data.get_full_name()}\nНомер - {data.contact}\nНомер(Мамы) - {data.contact_mam}\nНомер(Папы) - {data.contact_dad}'
+            }
+            a = requests.post(
+                url='https://api.telegram.org/bot6050131482:AAEJdTpOg-9irChfpEVHij8NJjsuvVb5Hho/sendMessage',
+                json=payload
+            )
+            print(a.json())
+            return redirect(reverse('success'))
+        else:
+            print(form.errors)
+            return super().post(request, *args, **kwargs)
 
 
 class ApplicationSendSuccessView(ListView):

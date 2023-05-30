@@ -19,6 +19,9 @@ class ApplicationForm(forms.ModelForm):
             'contact_dad': forms.TextInput(attrs={'placeholder': 'Контакты отца'}),
             'contact_mam': forms.TextInput(attrs={'placeholder': 'Контакты матери'}),
             'comment': forms.TextInput(attrs={'placeholder': 'Коментарий'}),
+            'contact': forms.TextInput(attrs={'placeholder': 'Ваши контактные данные'}),
+            'email': forms.EmailInput(attrs={'placeholder': 'test@test.com'}),
             # 'created_date': forms.TextInput(attrs={'placeholder': 'В каком колледже, техникуме лицее вы учитесь?'}),
         }
+
 

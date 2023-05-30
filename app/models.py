@@ -17,7 +17,7 @@ class City(models.Model):
 class ApplicationModel(models.Model):
     first_name = models.CharField(verbose_name=_('Имя'), max_length=123)
     last_name = models.CharField(verbose_name=_("Фамилия"), max_length=123)
-    middle_name = models.CharField(verbose_name=_("Отчество"), max_length=123)
+    middle_name = models.CharField(verbose_name=_("Отчество"), max_length=123, blank=True, null=True)
     age = models.DateTimeField(verbose_name=_("Дата рождения"))
     address = models.CharField(verbose_name=_("Адрес по прописке"), max_length=123)
     real_address = models.CharField(verbose_name=_("Фактический адрес"), max_length=123)
